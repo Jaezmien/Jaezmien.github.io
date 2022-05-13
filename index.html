@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		  content="IE=edge">
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1.0">
+	<title>Jaezmien Naejara</title>
+
+	<link rel="stylesheet"
+		  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+		  integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+		  crossorigin="anonymous"
+		  referrerpolicy="no-referrer" />
+
+	<link rel="preconnect"
+		  href="https://fonts.googleapis.com">
+	<link rel="preconnect"
+		  href="https://fonts.gstatic.com"
+		  crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
+		  rel="stylesheet">
+
+	<style>
+		* {
+			box-sizing: border-box;
+			;
+		}
+
+		body {
+			display: grid;
+			place-items: center;
+			min-height: 100vh;
+
+			font-family: 'Montserrat';
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+
+		main {
+			text-align: center;
+		}
+
+		h1 {
+			margin: 0;
+			padding: 0;
+		}
+
+		h1+p {
+			margin-top: 0;
+			font-size: 80%;
+		}
+
+		.smol {
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+		}
+
+		.smol img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.smol i {
+			font-size: 75%;
+			font-weight: 300;
+		}
+
+		.links {
+			margin-top: 1rem;
+			display: flex;
+			flex-direction: column;
+			gap: 0.2rem;
+		}
+
+		.links p {
+			margin: 0;
+		}
+
+		small {
+			font-size: 60%;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<h1>Under Construction</h1>
+		<p>But don't worry, the smols are already working hard to get it back up and running!</p>
+		<div class="smol">
+			<img src="./construction.png"
+				 alt="A smol performing serious work on constucting the website."
+				 title="She's not being paid for this job, she broke the coffee machine.">
+			<i>Fig. 1: a smol working hard to get it back up and running</i>
+		</div>
+		<div class="links">
+			<p>If you're looking for my NotITG files, <a href="./notitg_files.json">see the .json file for
+					it!</a></p>
+			<p>If you're looking to donate to me, <a id="fake"
+				   href="https://ko-fi.com/jaezmien">here's my Ko-Fi!</a> <small>(every dollar helps!)</small></p>
+		</div>
+	</main>
+
+	<script defer>
+		document.querySelector('#fake').onclick = () => { window.location = "https://ko-fi.com/heysora"; return false }
+	</script>
+</body>
+
+</html>
