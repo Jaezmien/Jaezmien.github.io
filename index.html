@@ -105,7 +105,10 @@
 	</main>
 
 	<script defer>
-		document.querySelector('#fake').onclick = () => { window.location = "https://ko-fi.com/heysora"; return false }
+		const link = document.querySelector('#fake')
+		link.onclick = () => { window.location = "https://ko-fi.com/heysora"; return false }
+		link.onmouseover = () => { link.setAttribute("href", "https://ko-fi.com/heysora") }
+		link.onmouseout = () => { link.setAttribute("href", "https://ko-fi.com/jaezmien") }
 	</script>
 </body>
 
