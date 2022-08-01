@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "entry-8dced93c.mjs",
+    "file": "entry-50721c03.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -16,12 +16,6 @@
       "entry.0b14b3a3.css"
     ],
     "assets": [
-      "notitg2.caca0098.png",
-      "notitg3.074bddcc.png",
-      "notitg4.621d846e.png",
-      "bookshelf.8a477efd.png",
-      "fimsharp1.b7e2ebc4.png",
-      "fimsharp2.a3866c2c.png",
       "devicon.0e4c406d.eot",
       "devicon.2783a9a2.ttf",
       "devicon.be0b81a6.woff",
@@ -29,7 +23,7 @@
     ]
   },
   "virtual:nuxt:T:/Programming/Webdev/meadow-next/.nuxt/error-component.mjs": {
-    "file": "error-component-9d4c535f.mjs",
+    "file": "error-component-544b71e7.mjs",
     "src": "virtual:nuxt:T:/Programming/Webdev/meadow-next/.nuxt/error-component.mjs",
     "isDynamicEntry": true,
     "imports": [
@@ -41,7 +35,7 @@
     ]
   },
   "pages/about.vue": {
-    "file": "about-23f839b6.mjs",
+    "file": "about-3fc095f6.mjs",
     "src": "pages/about.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -49,56 +43,56 @@
     ]
   },
   "pages/files.vue": {
-    "file": "files-4e9f500c.mjs",
+    "file": "files-b3d2b97e.mjs",
     "src": "pages/files.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_youtube-9fb69b40.mjs",
-      "_createVueComponent-37eba51c.mjs"
+      "_youtube-9151186b.mjs",
+      "_createVueComponent-02d329a3.mjs"
     ]
   },
-  "_youtube-9fb69b40.mjs": {
-    "file": "youtube-9fb69b40.mjs",
+  "_youtube-9151186b.mjs": {
+    "file": "youtube-9151186b.mjs",
     "imports": [
-      "_createVueComponent-37eba51c.mjs"
+      "_createVueComponent-02d329a3.mjs"
     ]
   },
-  "_createVueComponent-37eba51c.mjs": {
-    "file": "createVueComponent-37eba51c.mjs",
+  "_createVueComponent-02d329a3.mjs": {
+    "file": "createVueComponent-02d329a3.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/index.vue": {
-    "file": "index-db7e2e9c.mjs",
+    "file": "index-c11940ee.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_github-968ec677.mjs",
-      "_createVueComponent-37eba51c.mjs",
-      "_youtube-9fb69b40.mjs"
+      "_github-cea51ff4.mjs",
+      "_createVueComponent-02d329a3.mjs",
+      "_youtube-9151186b.mjs"
     ]
   },
-  "_github-968ec677.mjs": {
-    "file": "github-968ec677.mjs",
+  "_github-cea51ff4.mjs": {
+    "file": "github-cea51ff4.mjs",
     "imports": [
-      "_createVueComponent-37eba51c.mjs"
+      "_createVueComponent-02d329a3.mjs"
     ]
   },
   "pages/projects.vue": {
-    "file": "projects-9c531af3.mjs",
+    "file": "projects-fec7889a.mjs",
     "src": "pages/projects.vue",
     "isDynamicEntry": true,
     "imports": [
+      "_createVueComponent-02d329a3.mjs",
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_createVueComponent-37eba51c.mjs",
-      "_github-968ec677.mjs"
+      "_github-cea51ff4.mjs"
     ]
   },
   "layouts/default.vue": {
-    "file": "default-3edfa5f5.mjs",
+    "file": "default-93a40428.mjs",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -106,7 +100,7 @@
     ]
   },
   "layouts/padded.vue": {
-    "file": "padded-e3770146.mjs",
+    "file": "padded-4d9d1e2a.mjs",
     "src": "layouts/padded.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -114,7 +108,7 @@
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": {
-    "file": "error-404-560d0f73.mjs",
+    "file": "error-404-b9bb26c6.mjs",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -125,7 +119,7 @@
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue": {
-    "file": "error-500-ed420918.mjs",
+    "file": "error-500-78e2a258.mjs",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
