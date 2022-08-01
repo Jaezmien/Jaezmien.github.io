@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible"
+		  content="IE=edge" />
+	<meta name="viewport"
+		  content="width=device-width,initial-scale=1" />
+	<meta property="og:title"
+		  content="🌹🍎" />
+	<meta property="og:description"
+		  content="In the future." />
+	<meta property="og:url"
+		  content="https://jaezmien.heysora.net/rose" />
+	<meta property="og:type"
+		  content="website" />
+	<title>🌹 🍎</title>
+	<link rel="preconnect"
+		  href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+		  rel="stylesheet" />
+	<style>
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			display: grid;
+			place-items: center;
+			width: 100vw;
+			height: 100vh;
+			background: #000;
+		}
+
+		#content {
+			padding: 0 2rem;
+			text-align: center;
+		}
+
+		#emoji>img {
+			width: 32px;
+			height: 32px;
+		}
+
+		#emoji {
+			cursor: pointer;
+		}
+
+		#text {
+			color: #eee;
+			font-family: 'Playfair Display', serif;
+			user-select: none;
+			transition: opacity 1s ease;
+			opacity: 0;
+		}
+
+		#content.reveal #emoji {
+			cursor: initial;
+		}
+
+		#content.reveal #text {
+			user-select: initial;
+			opacity: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="content">
+		<div id="emoji">
+			<img src="apple.png"
+				 alt="Apple"
+				 onclick="reveal_text()" />
+		</div>
+		<div id="text">Maybe we will meet some other time.</div>
+	</div>
+	<script>
+		let is_revealed = false
+		function reveal_text() {
+			if (is_revealed) return
+			is_revealed = true
+			document.querySelector('#content').classList.add('reveal')
+		}
+	</script>
+</body>
+
+</html>
