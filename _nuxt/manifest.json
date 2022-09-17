@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "entry-e7955d81.mjs",
+    "file": "entry-6d6c91d3.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -23,7 +23,7 @@
     ]
   },
   "virtual:nuxt:T:/Programming/Webdev/meadow-next/.nuxt/error-component.mjs": {
-    "file": "error-component-a68d4209.mjs",
+    "file": "error-component-85c653ae.mjs",
     "src": "virtual:nuxt:T:/Programming/Webdev/meadow-next/.nuxt/error-component.mjs",
     "isDynamicEntry": true,
     "imports": [
@@ -35,7 +35,7 @@
     ]
   },
   "pages/about.vue": {
-    "file": "about-37d14250.mjs",
+    "file": "about-83c67c78.mjs",
     "src": "pages/about.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -43,56 +43,56 @@
     ]
   },
   "pages/files.vue": {
-    "file": "files-c0a5fca4.mjs",
+    "file": "files-b2a84156.mjs",
     "src": "pages/files.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_youtube-65ec5068.mjs",
-      "_createVueComponent-ba89589c.mjs"
+      "_youtube-378deb79.mjs",
+      "_createVueComponent-db345c12.mjs"
     ]
   },
-  "_youtube-65ec5068.mjs": {
-    "file": "youtube-65ec5068.mjs",
+  "_youtube-378deb79.mjs": {
+    "file": "youtube-378deb79.mjs",
     "imports": [
-      "_createVueComponent-ba89589c.mjs"
+      "_createVueComponent-db345c12.mjs"
     ]
   },
-  "_createVueComponent-ba89589c.mjs": {
-    "file": "createVueComponent-ba89589c.mjs",
+  "_createVueComponent-db345c12.mjs": {
+    "file": "createVueComponent-db345c12.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/index.vue": {
-    "file": "index-3701e705.mjs",
+    "file": "index-ffa56864.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_github-dbec9fb8.mjs",
-      "_createVueComponent-ba89589c.mjs",
-      "_youtube-65ec5068.mjs"
+      "_github-2613d789.mjs",
+      "_createVueComponent-db345c12.mjs",
+      "_youtube-378deb79.mjs"
     ]
   },
-  "_github-dbec9fb8.mjs": {
-    "file": "github-dbec9fb8.mjs",
+  "_github-2613d789.mjs": {
+    "file": "github-2613d789.mjs",
     "imports": [
-      "_createVueComponent-ba89589c.mjs"
+      "_createVueComponent-db345c12.mjs"
     ]
   },
   "pages/projects.vue": {
-    "file": "projects-e7de06de.mjs",
+    "file": "projects-5eca69bc.mjs",
     "src": "pages/projects.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_createVueComponent-ba89589c.mjs",
+      "_createVueComponent-db345c12.mjs",
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_github-dbec9fb8.mjs"
+      "_github-2613d789.mjs"
     ]
   },
   "layouts/default.vue": {
-    "file": "default-de88fee8.mjs",
+    "file": "default-5c7e7287.mjs",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -100,7 +100,7 @@
     ]
   },
   "layouts/padded.vue": {
-    "file": "padded-2669e37e.mjs",
+    "file": "padded-7c3b50aa.mjs",
     "src": "layouts/padded.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -108,7 +108,7 @@
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": {
-    "file": "error-404-925f8f80.mjs",
+    "file": "error-404-1555b737.mjs",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -119,7 +119,7 @@
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue": {
-    "file": "error-500-8a07117b.mjs",
+    "file": "error-500-2b0d1da8.mjs",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
