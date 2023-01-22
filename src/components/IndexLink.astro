@@ -8,7 +8,7 @@ const { text, link } = Astro.props;
 ---
 
 <li class="my-4 ml-auto w-fit">
-	<a href={link || '#'} class="cow-index-link-parent flex flex-row place-items-center gap-3">
+	<a href={link || '#'} rel="prefetch" class="cow-index-link-parent flex flex-row place-items-center gap-3">
 		<div class="cow-index-icon" aria-hidden="true">
 			<slot />
 		</div>
