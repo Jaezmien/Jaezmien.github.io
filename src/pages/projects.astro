@@ -1,0 +1,140 @@
+---
+import NavLayout from '../layouts/NavLayout.astro';
+
+import { github as Github, globe as Globe } from 'lucide-static/lib';
+---
+
+<NavLayout title="Projects">
+	<main class="max-w-lg mx-auto px-4 mb-8">
+		<h1 class="text-4xl font-extrabold drop-shadow-md mb-8">Main Projects</h1>
+
+		<ul id="main-projects">
+			<li>
+				<header class="flex flex-row flex-wrap gap-4">
+					<h2 class="text-3xl font-semibold">FiMSharp</h2>
+					<ul class="main-project-tags">
+						<li>.NET</li>
+						<li>CLI</li>
+						<li>Library</li>
+					</ul>
+				</header>
+
+				<section class="mb-2">
+					<p>
+						FiMSharp is a <a href="https://esolangs.org/wiki/FiM++" target="_blank">FiM++</a> interpreter written
+						purely in C#.
+					</p>
+				</section>
+
+				<footer class="main-project-links">
+					<ul>
+						<li aria-label="Website">
+							<a href="https://fimsharp.netlify.app">
+								<Fragment set:html={Globe} />
+							</a>
+						</li>
+						<li aria-label="Github Repository">
+							<a href="https://github.com/Jaezmien/FiMSharp">
+								<Fragment set:html={Github} />
+							</a>
+						</li>
+					</ul>
+				</footer>
+			</li>
+			<li>
+				<header class="flex flex-row flex-wrap gap-4">
+					<h2 class="text-3xl font-semibold">Bookshelf</h2>
+					<ul class="main-project-tags">
+						<li>Vue 3</li>
+						<li>PWA</li>
+					</ul>
+				</header>
+
+				<section class="mb-2">
+					<p>
+						Bookshelf is a PWA-enabled webapp that allows offline reading of any <a
+							href="https://fimfiction.net"
+							target="_blank"
+						>
+							FiMFiction
+						</a> file format.
+					</p>
+				</section>
+
+				<footer class="main-project-links">
+					<ul>
+						<li aria-label="Website">
+							<a href="https://bookshelf.netlify.app">
+								<Fragment set:html={Globe} />
+							</a>
+						</li>
+						<li aria-label="Github Repository">
+							<a href="https://github.com/Jaezmien/Bookshelf">
+								<Fragment set:html={Github} />
+							</a>
+						</li>
+					</ul>
+				</footer>
+			</li>
+		</ul>
+
+		<hr class="my-12 border-meadow-text/40" />
+
+		<h2 class="text-2xl font-semibold">Side Projects</h2>
+
+		<ul class="list-disc" id="side-projects">
+			<li>
+				<a href="https://oldponish.netlify.app">Old Ponish</a>
+				<p>The official website of the Old Ponish Project</p>
+			</li>
+			<li>
+				<a href="https://github.com/Jaezmien/discord-channel-archiver">Discord Channel Archiver</a>
+				<p>A NodeJS CLI+Library to quickly archive Discord channels.</p>
+			</li>
+			<li>
+				<a href="https://github.com/Jaezmien/NotITG-Moo">Moo</a>
+				<p>A modfile and game framework for NotITG.</p>
+			</li>
+			<li>
+				<a href="https://github.com/Jaezmien/Lemonade">Lemonade</a>
+				<p>A handler for managing NotITG's external memory - written for C#, Python and NodeJS.</p>
+			</li>
+			<li>
+				<a href="https://github.com/Jaezmien/cow-datapacks">Minecraft Datapacks</a>
+				<p>A small collection of datapacks for Minecraft 1.18+</p>
+			</li>
+			<li>
+				<a href="https://tinyblockpos.netlify.app">Tiny Block Position</a>
+				<p>A small webapp to convert Minecraft's coordinate system.</p>
+			</li>
+			<li>
+				<a href="https://every-other-day.netlify.app">Every Other Day</a>
+				<p>A small PWA-enabled webapp to tell you if it's the other day.</p>
+			</li>
+		</ul>
+	</main>
+</NavLayout>
+
+<style lang="scss">
+	#side-projects > li {
+		@apply mb-4 last:mb-0;
+	}
+	#main-projects > li {
+		@apply mb-8 last:mb-0;
+	}
+	.main-project-tags {
+		@apply flex flex-row flex-wrap gap-2 text-sm place-items-center justify-center;
+
+		li {
+			@apply py-1 px-2 bg-meadow-text text-meadow-bg rounded-md;
+		}
+	}
+	.main-project-links {
+		ul {
+			@apply flex flex-row flex-wrap justify-evenly text-meadow;
+			li {
+				@apply p-2;
+			}
+		}
+	}
+</style>

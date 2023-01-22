@@ -1,0 +1,101 @@
+---
+import {
+	briefcase as Briefcase,
+	gamepad2 as Gamepad2,
+	github as Github,
+	mail as Mail,
+	twitter as Twitter,
+	user as User,
+	wallet as Wallet,
+	youtube as Youtube,
+} from 'lucide-static/lib';
+
+import IndexLink from '../components/IndexLink.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main class="min-h-screen w-full grid place-items-center">
+		<div>
+			<header>
+				<div>
+					<p class="text-sm sm:text-base opacity-60 italic font-light text-left leading-3 drop-shadow-sm">
+						Hi! My name is
+					</p>
+					<h1 class="text-5xl sm:text-6xl font-extrabold leading-none text-center py-1 drop-shadow-md">
+						Jaezmien<br />Naejara
+					</h1>
+					<p class="text-sm sm:text-base opacity-60 italic font-light text-right mt-1 drop-shadow-sm">
+						and I like to do silly things.
+					</p>
+				</div>
+			</header>
+
+			<nav class="mt-7 mb-9">
+				<ul>
+					<IndexLink text="About Me" link="/about">
+						<Fragment set:html={User} />
+					</IndexLink>
+					<IndexLink text="NotITG Files" link="/notitg">
+						<Fragment set:html={Gamepad2} />
+					</IndexLink>
+					<IndexLink text="Projects" link="/projects">
+						<Fragment set:html={Briefcase} />
+					</IndexLink>
+					<IndexLink text="Commissions" link="/commission">
+						<Fragment set:html={Wallet} />
+					</IndexLink>
+				</ul>
+			</nav>
+
+			<footer>
+				<ul class="flex flex-row place-items-center justify-evenly">
+					<li>
+						<a
+							href="mailto:jaezmien.naejara@gmail.com"
+							aria-label="Email"
+							class="transition-opacity opacity-60 duration-200 hover:opacity-100 text-meadow-dark"
+						>
+							<Fragment set:html={Mail} />
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://www.youtube.com/channel/UCTXYVbsNeYEZfYEv6YaWc8A"
+							aria-label="Youtube"
+							class="transition-opacity opacity-60 duration-200 hover:opacity-100 text-[#ff0000]"
+						>
+							<Fragment set:html={Youtube} />
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://twitter.com/jaezmien"
+							aria-label="Twitter"
+							class="transition-opacity opacity-60 duration-200 hover:opacity-100 text-[#1da1f2]"
+						>
+							<Fragment set:html={Twitter} />
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://github.com/Jaezmien"
+							aria-label="Github"
+							class="transition-opacity opacity-60 duration-200 hover:opacity-100 text-[#333333]"
+						>
+							<Fragment set:html={Github} />
+						</a>
+					</li>
+				</ul>
+			</footer>
+		</div>
+	</main>
+</Layout>
+
+<style lang="scss">
+	h1 {
+		background-image: linear-gradient(90deg, hsla(188, 90%, 51%, 1) 0%, rgb(30, 221, 164) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+</style>
