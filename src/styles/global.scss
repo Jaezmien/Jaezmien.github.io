@@ -1,0 +1,41 @@
+:root {
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+
+	color-scheme: light;
+}
+* {
+	box-sizing: border-box;
+}
+html {
+	font-family: 'Exo 2', system-ui, sans-serif;
+}
+code {
+	font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
+		monospace;
+}
+
+h1 {
+	font-family: 'Raleway', Arial, Helvetica, sans-serif;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+a {
+	@apply text-meadow italic;
+}
+img.emoji {
+	height: 1em;
+	width: 1em;
+	margin: 0 0.05em 0 0.1em;
+	vertical-align: -0.1em;
+	display: inline-block;
+}

@@ -1,0 +1,160 @@
+---
+import NavLayout from '../layouts/NavLayout.astro';
+
+import { download as Download, youtube as Youtube } from 'lucide-static/lib';
+---
+
+<script>
+	import Alpine from 'alpinejs';
+	import Twemoji from 'twemoji';
+
+	declare global {
+		interface Window {
+			Twemoji: any;
+			format_notitg_ver: any;
+		}
+	}
+	window.Twemoji = Twemoji;
+
+	Alpine.start();
+</script>
+
+<NavLayout title="NotITG Files">
+	<main class="px-4 mb-8">
+		<h1 class="text-center text-4xl font-extrabold drop-shadow-md">NotITG Files</h1>
+
+		<ul
+			class="mx-2 sm:mx-8 flex flex-col md:flex-row md:flex-wrap md:items-stretch"
+			x-data="{
+				files: [],
+				getVersionImage(ver) {
+					return `/icons/${ this.formatVersion(ver) }.png`
+				},
+				formatVersion(ver) {
+					switch (ver) {
+						case 'notitg3':
+						case 'notitg3.1':
+							return 'notitg3';
+						case 'notitg4':
+						case 'notitg4.01':
+						case 'notitg4.2':
+							return 'notitg4';
+					}
+					return ver || 'itg';
+				},
+				readableVersion(ver) {
+					switch (ver) {
+						case 'notitg1':
+							return 'NotITG v1';
+						case 'notitg2':
+							return 'NotITG v2';
+						case 'notitg3':
+							return 'NotITG v3';
+						case 'notitg3.1':
+							return 'NotITG v3.1';
+						case 'notitg4':
+							return 'NotITG v4';
+						case 'notitg4.01':
+							return 'NotITG v4.0.1';
+						case 'notitg4.2':
+							return 'NotITG v4.2';
+						default:
+							return 'OpenITG';
+					}
+				},
+				fileID(name) { return name.toLowerCase().replace(/\\s/g,'-').replace(/[\\(\\)]|(\\.)$/g,''); },
+				breakFileName(name) { return name.replace(/\\./g, '\u200B.'); }
+			}"
+			x-init="fetch('/notitg_files.json').then(req => req.json()).then(data => {
+				files = data
+				
+				$nextTick(() => {
+					Twemoji.parse(document.body)
+
+					let hash = window.location.hash.substring(1)
+					if( hash && document.getElementById(hash) ) {
+						document.getElementById(hash).scrollIntoView()
+					}
+				})
+			})"
+		>
+			<template x-for="file in files">
+				<li class="mb-8 last:mb-0 basis-1/2 flex-grow">
+					<div
+						x-bind:id="fileID(file.file_name)"
+						class="h-full m-4 border-2 border-slate-300/20 bg-slate-200 shadow-md rounded-md p-4 transition-shadow duration-200 hover:shadow-lg flex flex-col"
+					>
+						<header>
+							<div class="flex flex-row gap-4 place-items-center">
+								<img
+									x-bind:src="getVersionImage(file.notitg_version)"
+									x-bind:alt="readableVersion(file.notitg_version)"
+									x-bind:title="readableVersion(file.notitg_version)"
+								/>
+								<h1
+									class="text-2xl sm:text-3xl font-semibold break-words"
+									x-text="breakFileName(file.file_name)"
+								>
+								</h1>
+							</div>
+							<p class="font-light italic" x-text="file.artist || ''"></p>
+						</header>
+
+						<main class="my-4">
+							<p x-text="file.description" class="whitespace-pre-wrap"></p>
+						</main>
+
+						<footer class="flex flex-col sm:flex-row gap-2 mt-auto">
+							<template x-if="file.collaborated">
+								<div class="flex place-items-end justify-start">
+									<p class="italic">
+										A collaboration with <b x-text="file.collaborated"></b>
+									</p>
+								</div>
+							</template>
+							<div class="flex-grow">
+								<ul class="flex flex-row flex-wrap place-items-center justify-end gap-4">
+									<li>
+										<a
+											x-bind:href="file.youtube"
+											class="text-[#ff0000] transition-colors hover:text-[#ff6b6b] not-italic flex flex-row place-items-center gap-2 p-2"
+										>
+											<Fragment set:html={Youtube} />
+											<p class="hidden sm:block">Youtube</p>
+										</a>
+									</li>
+									<li>
+										<a
+											x-bind:href="file.download"
+											title="Regular Download"
+											class="text-meadow-text transition-colors hover:text-[#858697] not-italic flex flex-row place-items-center gap-2 p-2"
+										>
+											<Fragment set:html={Download} />
+											<p class="hidden sm:block">Download</p>
+										</a>
+									</li>
+									<template x-for="extra in file.extra_downloads">
+										<li>
+											<a
+												x-bind:href="extra.link"
+												x-bind:title="extra.title"
+												class="text-meadow-text transition-colors hover:text-[#858697] not-italic flex flex-row place-items-center gap-2 p-2"
+											>
+												<Fragment set:html={Download} />
+												<p class="hidden sm:block" x-text="extra.title"></p>
+											</a>
+										</li>
+									</template>
+								</ul>
+							</div>
+						</footer>
+					</div>
+				</li>
+			</template>
+
+			<div x-show="!files.length" class="text-center opacity-40 italic">
+				<p>Loading files...</p>
+			</div>
+		</ul>
+	</main>
+</NavLayout>

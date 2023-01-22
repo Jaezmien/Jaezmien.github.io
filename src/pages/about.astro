@@ -1,0 +1,172 @@
+---
+import NavLayout from '../layouts/NavLayout.astro';
+
+import Computer from '../assets/svgs/computer.svg?raw';
+import BlueHeart from '../assets/svgs/heart.svg?raw';
+
+import CSharp from '../assets/svgs/csharp.svg?raw';
+import Javascript from '../assets/svgs/javascript.svg?raw';
+import Lua from '../assets/svgs/lua.svg?raw';
+import NodeJS from '../assets/svgs/nodejs.svg?raw';
+import Python from '../assets/svgs/python.svg?raw';
+import Typescript from '../assets/svgs/typescript.svg?raw';
+
+import DiscordJS from '../assets/svgs/discordjs.svg?raw';
+import Express from '../assets/svgs/express.svg?raw';
+import Firebase from '../assets/svgs/firebase.svg?raw';
+import Nuxt from '../assets/svgs/nuxt.svg?raw';
+import Sass from '../assets/svgs/sass.svg?raw';
+import Sequelize from '../assets/svgs/sequelize.svg?raw';
+import SQLite from '../assets/svgs/sqlite.svg?raw';
+import Tailwind from '../assets/svgs/tailwind.svg?raw';
+import Vue from '../assets/svgs/vue.svg?raw';
+---
+
+<script>
+	import Alpine from 'alpinejs';
+
+	Alpine.start();
+</script>
+
+<NavLayout title="About Me">
+	<main class="max-w-lg mx-auto px-4 mb-8">
+		<h1
+			class="text-4xl font-extrabold mb-2 drop-shadow-md"
+			x-data
+			x-on:dblclick="window.location = 'https://vinylmelody.neocities.org'"
+		>
+			Hello!
+		</h1>
+		<p class="indent-4 leading-7">
+			My name is <b title="/jazzmiyen næe-djara/" class="font-bold text-meadow-dark">Jaezmien Naejara</b>, a
+			cow-pony from Ponyville with a passion for coding and a love for all things tech.
+		</p>
+		<p class="indent-4 leading-7">
+			I am deeply motivated by the idea of bringing the visions of my fellow ponies to life, which is why I am
+			passionate about creating <i>free (and even open-source) software</i>. I believe that by making my work
+			accessible to all, I can empower other ponies to turn their ideas into reality and make a positive impact on
+			our community.
+		</p>
+		<p class="indent-4 leading-7">
+			In my free time, I enjoy experimenting with <a
+				href="https://www.youtube.com/playlist?list=PL_c19Mt2f9yTwEvKXqdnHDLKEC7mUb5JU"
+			>
+				silly and unconventional ideas
+			</a>, just to see if they might work.
+		</p>
+		<br />
+		<p class="indent-4 leading-7">
+			In addition to my passion for software development, I also have a keen interest in digital art, particularly
+			in the areas of drawing ponies and furries as a side hobby.
+		</p>
+		<br />
+		<p class="indent-4 leading-7">
+			I do not have a preference for any specific pronouns, therefore, I am comfortable with using <b
+				class="text-meadow-dark"
+			>
+				They / Any
+			</b>. This means that I am open to being referred to in any way that makes the other person comfortable and
+			that I do not identify with any specific gender.
+		</p>
+		<br />
+		<p class="text-center leading-7">
+			Interested in working with me? Feel free to <a href="mailto:jaezmien.naejara@gmail.com">
+				drop me an email.
+			</a>
+		</p>
+
+		<hr class="my-12 border-meadow-text/40" />
+
+		<h2 class="text-2xl font-bold drop-shadow-md">
+			My <span class="inline-block w-6 h-full my-auto" aria-label="Heart">
+				<Fragment set:html={BlueHeart} />
+			</span> Languages
+		</h2>
+		<ul class="flex flex-wrap justify-evenly place-items-center gap-8 mx-2 my-4 fill-meadow-dark">
+			<li class="w-16 h-16" aria-label="Javascript, Typescript and NodeJS">
+				<div
+					id="js-carousel"
+					x-data="{current: 0}"
+					x-init="$nextTick(() => {
+						setInterval(() => {
+							current = (current + 1) % 3
+						}, 4000)	
+					})"
+				>
+					<div x-bind:class="current == 0 && 'show'">
+						<Fragment set:html={Javascript} />
+					</div>
+					<div x-bind:class="current == 1 && 'show'">
+						<Fragment set:html={Typescript} />
+					</div>
+					<div x-bind:class="current == 2 && 'show'">
+						<Fragment set:html={NodeJS} />
+					</div>
+				</div>
+			</li>
+			<li class="w-16 h-16" aria-label="C#">
+				<Fragment set:html={CSharp} />
+			</li>
+			<li class="w-16 h-16" aria-label="Lua">
+				<Fragment set:html={Lua} />
+			</li>
+			<li class="w-16 h-16" aria-label="Python">
+				<Fragment set:html={Python} />
+			</li>
+		</ul>
+
+		<h2 class="text-2xl font-bold drop-shadow-md mt-12">
+			My Tech <span class="inline-block w-6 h-full my-auto" aria-label="Heart">
+				<Fragment set:html={Computer} />
+			</span> Experiences
+		</h2>
+		<ul class="flex flex-wrap justify-evenly place-items-center gap-8 mx-2 my-4 fill-meadow-dark">
+			<li class="w-16 h-16" aria-label="Vue JS">
+				<Fragment set:html={Vue} />
+			</li>
+			<li class="w-16 h-16" aria-label="Nuxt JS">
+				<Fragment set:html={Nuxt} />
+			</li>
+			<li class="w-16 h-16" aria-label="Express JS">
+				<Fragment set:html={Express} />
+			</li>
+			<li class="w-16 h-16" aria-label="Sass">
+				<Fragment set:html={Sass} />
+			</li>
+			<li class="w-16 h-16" aria-label="Tailwind CSS">
+				<Fragment set:html={Tailwind} />
+			</li>
+			<li class="w-16 h-16" aria-label="SQLite">
+				<Fragment set:html={SQLite} />
+			</li>
+			<li class="w-16 h-16" aria-label="Sequelize">
+				<Fragment set:html={Sequelize} />
+			</li>
+			<li class="w-16 h-16" aria-label="Firebase">
+				<Fragment set:html={Firebase} />
+			</li>
+			<li class="w-16 h-16" aria-label="Discord JS">
+				<Fragment set:html={DiscordJS} />
+			</li>
+		</ul>
+		<p class="mt-8 text-center opacity-80 italic font-light">...and eager to learn more everyday!</p>
+	</main>
+</NavLayout>
+
+<style lang="scss" is:global>
+	#js-carousel {
+		position: relative;
+		> * {
+			position: absolute;
+
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: opacity ease-in-out 200ms;
+
+			&.show {
+				opacity: 1;
+			}
+		}
+	}
+</style>
