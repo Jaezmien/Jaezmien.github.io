@@ -82,7 +82,7 @@ import { download as Download, youtube as Youtube } from 'lucide-static/lib';
 				<li class="mb-8 last:mb-0 basis-1/2 flex-grow">
 					<div
 						x-bind:id="fileID(file.file_name)"
-						class="h-full m-4 border-2 border-slate-300/20 bg-slate-200 shadow-md rounded-md p-4 transition-shadow duration-200 hover:shadow-lg flex flex-col"
+						class="h-full m-4 border-2 border-slate-300/20 bg-slate-800/5 dark:bg-slate-800/20 shadow-md rounded-md p-4 transition-shadow duration-200 hover:shadow-lg flex flex-col"
 					>
 						<header>
 							<div class="flex flex-row gap-4 place-items-center">
@@ -127,7 +127,7 @@ import { download as Download, youtube as Youtube } from 'lucide-static/lib';
 										<a
 											x-bind:href="file.download"
 											title="Regular Download"
-											class="text-meadow-text transition-colors hover:text-[#858697] not-italic flex flex-row place-items-center gap-2 p-2"
+											class="text-meadow-text dark:text-meadow-bg transition-colors hover:text-[#858697] not-italic flex flex-row place-items-center gap-2 p-2"
 										>
 											<Fragment set:html={Download} />
 											<p class="hidden sm:block">Download</p>
@@ -138,7 +138,7 @@ import { download as Download, youtube as Youtube } from 'lucide-static/lib';
 											<a
 												x-bind:href="extra.link"
 												x-bind:title="extra.title"
-												class="text-meadow-text transition-colors hover:text-[#858697] not-italic flex flex-row place-items-center gap-2 p-2"
+												class="text-meadow-text dark:text-meadow-bg transition-colors hover:text-[#858697] not-italic flex flex-row place-items-center gap-2 p-2"
 											>
 												<Fragment set:html={Download} />
 												<p class="hidden sm:block" x-text="extra.title"></p>

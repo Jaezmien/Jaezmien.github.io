@@ -1,4 +1,5 @@
 ---
+import Separator from '../components/Separator.astro';
 import NavLayout from '../layouts/NavLayout.astro';
 
 import Computer from '../assets/svgs/computer.svg?raw';
@@ -38,8 +39,9 @@ import Vue from '../assets/svgs/vue.svg?raw';
 			Hello!
 		</h1>
 		<p class="indent-4 leading-7">
-			My name is <b title="/jazzmiyen næe-djara/" class="font-bold text-meadow-dark">Jaezmien Naejara</b>, a
-			cow-pony from Ponyville with a passion for coding and a love for all things tech.
+			My name is <b title="/jazzmiyen næe-djara/" class="font-bold text-meadow-dark dark:text-meadow-lighter">
+				Jaezmien Naejara
+			</b>, a cow-pony from Ponyville with a passion for coding and a love for all things tech.
 		</p>
 		<p class="indent-4 leading-7">
 			I am deeply motivated by the idea of bringing the visions of my fellow ponies to life, which is why I am
@@ -62,7 +64,7 @@ import Vue from '../assets/svgs/vue.svg?raw';
 		<br />
 		<p class="indent-4 leading-7">
 			I do not have a preference for any specific pronouns, therefore, I am comfortable with using <b
-				class="text-meadow-dark"
+				class="text-meadow-dark dark:text-meadow-lighter"
 			>
 				They / Any
 			</b>. This means that I am open to being referred to in any way that makes the other person comfortable and
@@ -75,14 +77,16 @@ import Vue from '../assets/svgs/vue.svg?raw';
 			</a>
 		</p>
 
-		<hr class="my-12 border-meadow-text/40" />
+		<Separator />
 
 		<h2 class="text-2xl font-bold drop-shadow-md">
 			My <span class="inline-block w-6 h-full my-auto" aria-label="Heart">
 				<Fragment set:html={BlueHeart} />
 			</span> Languages
 		</h2>
-		<ul class="flex flex-wrap justify-evenly place-items-center gap-8 mx-2 my-4 fill-meadow-dark">
+		<ul
+			class="flex flex-wrap justify-evenly place-items-center gap-8 mx-2 my-4 fill-meadow-dark dark:fill-meadow-lighter"
+		>
 			<li class="w-16 h-16" aria-label="Javascript, Typescript and NodeJS">
 				<div
 					id="js-carousel"
@@ -120,7 +124,9 @@ import Vue from '../assets/svgs/vue.svg?raw';
 				<Fragment set:html={Computer} />
 			</span> Experiences
 		</h2>
-		<ul class="flex flex-wrap justify-evenly place-items-center gap-8 mx-2 my-4 fill-meadow-dark">
+		<ul
+			class="flex flex-wrap justify-evenly place-items-center gap-8 mx-2 my-4 fill-meadow-dark dark:fill-meadow-lighter"
+		>
 			<li class="w-16 h-16" aria-label="Vue JS">
 				<Fragment set:html={Vue} />
 			</li>

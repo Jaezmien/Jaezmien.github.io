@@ -8,9 +8,10 @@ module.exports = {
 					bg: '#E6F4F1',
 					text: '#454655',
 
-					light: '#76DDEA',
-					DEFAULT: '#76A3EA',
-					dark: '#8376EA',
+					lighter: '#1EDDA4',
+					light: '#12D5F3',
+					DEFAULT: '#2363D1',
+					dark: '#5D60D2',
 				},
 			},
 			transitionProperty: {

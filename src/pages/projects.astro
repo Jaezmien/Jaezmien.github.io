@@ -1,7 +1,8 @@
 ---
+import Separator from '../components/Separator.astro';
 import NavLayout from '../layouts/NavLayout.astro';
 
-import { github as Github,globe as Globe } from 'lucide-static/lib';
+import { github as Github, globe as Globe } from 'lucide-static/lib';
 ---
 
 <NavLayout title="Projects">
@@ -78,7 +79,7 @@ import { github as Github,globe as Globe } from 'lucide-static/lib';
 			</li>
 		</ul>
 
-		<hr class="my-12 border-meadow-text/40" />
+		<Separator />
 
 		<h2 class="text-2xl font-semibold">Side Projects</h2>
 
@@ -126,7 +127,7 @@ import { github as Github,globe as Globe } from 'lucide-static/lib';
 		@apply flex flex-row flex-wrap gap-2 text-sm place-items-center justify-center;
 
 		li {
-			@apply py-1 px-2 bg-meadow-text text-meadow-bg rounded-md;
+			@apply py-1 px-2 bg-slate-800/60 dark:bg-slate-800/40 text-meadow-bg rounded-md shadow-sm;
 		}
 	}
 	.main-project-links {
