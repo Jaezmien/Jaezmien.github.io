@@ -1,4 +1,5 @@
 ---
+import KofiButton from '../components/KofiButton.astro';
 import NavLayout from '../layouts/NavLayout.astro';
 ---
 
@@ -42,38 +43,21 @@ import NavLayout from '../layouts/NavLayout.astro';
 
 		<p>While you're here, how about you check out some of my friends!</p>
 
-		<script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
-
 		<ul class="flex flex-col justify-center place-items-center gap-4 my-4">
 			<li>
-				<script type="text/javascript">
-					kofiwidget2.init('Support HeySora on Ko-fi', '#b2a199', 'heysora');
-					kofiwidget2.draw();
-				</script>
+				<KofiButton name="HeySora" hexCode="#b2a199" url="heysora" />
 			</li>
 			<li>
-				<script type="text/javascript">
-					kofiwidget2.init('Support Astronomena on Ko-fi', '#3f0f29', 'astronomena');
-					kofiwidget2.draw();
-				</script>
+				<KofiButton name="Astronomena" hexCode="#3f0f29" url="astronomena" />
 			</li>
 			<li>
-				<script type="text/javascript">
-					kofiwidget2.init('Support KennethLias on Ko-fi', '#8838bd', 'kennethlias');
-					kofiwidget2.draw();
-				</script>
+				<KofiButton name="KennethLias" hexCode="#8838bd" url="kennethlias" />
 			</li>
 			<li>
-				<script type="text/javascript">
-					kofiwidget2.init('Support Sudospective on Ko-fi', '#271e3d', 'sudospective');
-					kofiwidget2.draw();
-				</script>
+				<KofiButton name="Sudospective" hexCode="#271e3d" url="sudospective" />
 			</li>
 			<li>
-				<script type="text/javascript">
-					kofiwidget2.init('Support the Draco System on Ko-fi', '#8c9cee', 'bright0595');
-					kofiwidget2.draw();
-				</script>
+				<KofiButton name="the Draco System" hexCode="#8c9cee" url="bright0595" />
 			</li>
 		</ul>
 	</main>
