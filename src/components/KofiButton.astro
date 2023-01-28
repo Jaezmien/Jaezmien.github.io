@@ -23,7 +23,12 @@ const url = Astro.props.url ?? name;
 		target="_blank"
 	>
 		<span class="kofitext">
-			<img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi donations" class="kofiimg" />
+			<img
+				src="https://storage.ko-fi.com/cdn/cup-border.png"
+				alt="Ko-fi donations"
+				class="kofiimg"
+				aria-hidden="true"
+			/>
 			{`Support ${name} on Ko-Fi`}
 		</span>
 	</a>
