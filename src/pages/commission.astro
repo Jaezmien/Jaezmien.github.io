@@ -1,6 +1,7 @@
 ---
 import KofiButton from '../components/KofiButton.astro';
 import Separator from '../components/Separator.astro';
+import TextLink from '../components/TextLink.astro';
 import NavLayout from '../layouts/NavLayout.astro';
 ---
 
@@ -37,7 +38,9 @@ import NavLayout from '../layouts/NavLayout.astro';
 		</ul>
 
 		<p class="text-center">
-			<a href="/art-tos" rel="prefetch">Terms of Service for art commission and requests.</a>
+			<TextLink href="/art-tos" rel="prefetch" spacing="relaxed">
+				Terms of Service for art commission and requests.
+			</TextLink>
 		</p>
 
 		<Separator />

@@ -1,5 +1,6 @@
 ---
 import Separator from '../components/Separator.astro';
+import TextLink from '../components/TextLink.astro';
 import NavLayout from '../layouts/NavLayout.astro';
 
 import { github as Github, globe as Globe } from 'lucide-static/lib';
@@ -22,8 +23,8 @@ import { github as Github, globe as Globe } from 'lucide-static/lib';
 
 				<section class="mb-2">
 					<p>
-						FiMSharp is a <a href="https://esolangs.org/wiki/FiM++" target="_blank">FiM++</a> interpreter written
-						purely in C#.
+						FiMSharp is a <TextLink href="https://esolangs.org/wiki/FiM++" tab={true}>FiM++</TextLink> interpreter
+						written purely in C#.
 					</p>
 				</section>
 
@@ -53,12 +54,12 @@ import { github as Github, globe as Globe } from 'lucide-static/lib';
 
 				<section class="mb-2">
 					<p>
-						Bookshelf is a PWA-enabled webapp that allows offline reading of any <a
+						Bookshelf is a PWA-enabled webapp that allows offline reading of any <TextLink
 							href="https://fimfiction.net"
-							target="_blank"
+							tab={true}
 						>
 							FiMFiction
-						</a> file format.
+						</TextLink> file format.
 					</p>
 				</section>
 
@@ -85,31 +86,33 @@ import { github as Github, globe as Globe } from 'lucide-static/lib';
 
 		<ul class="list-disc" id="side-projects">
 			<li>
-				<a href="https://oldponish.netlify.app">Old Ponish</a>
+				<TextLink tab={true} href="https://oldponish.netlify.app">Old Ponish</TextLink>
 				<p>The official website of the Old Ponish Project</p>
 			</li>
 			<li>
-				<a href="https://github.com/Jaezmien/discord-channel-archiver">Discord Channel Archiver</a>
+				<TextLink tab={true} href="https://github.com/Jaezmien/discord-channel-archiver">
+					Discord Channel Archiver
+				</TextLink>
 				<p>A NodeJS CLI+Library to quickly archive Discord channels.</p>
 			</li>
 			<li>
-				<a href="https://github.com/Jaezmien/NotITG-Moo">Moo</a>
+				<TextLink tab={true} href="https://github.com/Jaezmien/NotITG-Moo">Moo</TextLink>
 				<p>A modfile and game framework for NotITG.</p>
 			</li>
 			<li>
-				<a href="https://github.com/Jaezmien/Lemonade">Lemonade</a>
+				<TextLink tab={true} href="https://github.com/Jaezmien/Lemonade">Lemonade</TextLink>
 				<p>A handler for managing NotITG's external memory - written for C#, Python and NodeJS.</p>
 			</li>
 			<li>
-				<a href="https://github.com/Jaezmien/cow-datapacks">Minecraft Datapacks</a>
+				<TextLink tab={true} href="https://github.com/Jaezmien/cow-datapacks">Minecraft Datapacks</TextLink>
 				<p>A small collection of datapacks for Minecraft 1.18+</p>
 			</li>
 			<li>
-				<a href="https://tinyblockpos.netlify.app">Tiny Block Position</a>
+				<TextLink tab={true} href="https://tinyblockpos.netlify.app">Tiny Block Position</TextLink>
 				<p>A small webapp to convert Minecraft's coordinate system.</p>
 			</li>
 			<li>
-				<a href="https://every-other-day.netlify.app">Every Other Day</a>
+				<TextLink tab={true} href="https://every-other-day.netlify.app">Every Other Day</TextLink>
 				<p>A small PWA-enabled webapp to tell you if it's the other day.</p>
 			</li>
 		</ul>

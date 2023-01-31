@@ -1,0 +1,20 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+export interface Props extends HTMLAttributes<'a'> {
+	href: string;
+	spacing?: 'tight' | 'relaxed';
+	tab?: boolean;
+	class?: string;
+}
+
+const { href, class: className = '', spacing = 'tight', tab = false, ...attrs } = Astro.props;
+---
+
+<a
+	href={href}
+	target={tab ? '_blank' : '_self'}
+	class={`underline ${spacing === 'tight' ? 'underline-offset-4' : 'underline-offset-8'} ${className}`}
+	{...attrs}
+>
+	<slot />
+</a>

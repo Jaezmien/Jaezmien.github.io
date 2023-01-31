@@ -12,15 +12,23 @@ import NodeJS from '../assets/svgs/nodejs.svg?raw';
 import Python from '../assets/svgs/python.svg?raw';
 import Typescript from '../assets/svgs/typescript.svg?raw';
 
+import Alpine from '../assets/svgs/alpine.svg?raw';
+import AstroD from '../assets/svgs/astro-dark.svg?raw';
+import AstroL from '../assets/svgs/astro-light.svg?raw';
 import DiscordJS from '../assets/svgs/discordjs.svg?raw';
 import Express from '../assets/svgs/express.svg?raw';
 import Firebase from '../assets/svgs/firebase.svg?raw';
 import Nuxt from '../assets/svgs/nuxt.svg?raw';
+import PrismaD from '../assets/svgs/prisma-dark.svg?raw';
+import PrismaL from '../assets/svgs/prisma-light.svg?raw';
 import Sass from '../assets/svgs/sass.svg?raw';
 import Sequelize from '../assets/svgs/sequelize.svg?raw';
 import SQLite from '../assets/svgs/sqlite.svg?raw';
 import Tailwind from '../assets/svgs/tailwind.svg?raw';
 import Vue from '../assets/svgs/vue.svg?raw';
+import WindiCSS from '../assets/svgs/windicss.svg?raw';
+
+import TextLink from '../components/TextLink.astro';
 ---
 
 <script>
@@ -41,7 +49,8 @@ import Vue from '../assets/svgs/vue.svg?raw';
 		<p class="indent-4 leading-7">
 			My name is <b title="/jazzmiyen næe-djara/" class="font-bold text-meadow-dark dark:text-meadow-lighter">
 				Jaezmien Naejara
-			</b>, a cow-pony from Ponyville with a passion for coding and a love for all things tech.
+			</b>, and I am a half-cow, half-pony Software Developer from Ponyville with a passion for coding and a love
+			for all things technology.
 		</p>
 		<p class="indent-4 leading-7">
 			I am deeply motivated by the idea of bringing the visions of my fellow ponies to life, which is why I am
@@ -50,11 +59,11 @@ import Vue from '../assets/svgs/vue.svg?raw';
 			our community.
 		</p>
 		<p class="indent-4 leading-7">
-			In my free time, I enjoy experimenting with <a
+			In my free time, I enjoy experimenting with <TextLink
 				href="https://www.youtube.com/playlist?list=PL_c19Mt2f9yTwEvKXqdnHDLKEC7mUb5JU"
 			>
 				silly and unconventional ideas
-			</a>, just to see if they might work.
+			</TextLink>, just to see if they might work.
 		</p>
 		<br />
 		<p class="indent-4 leading-7">
@@ -63,7 +72,7 @@ import Vue from '../assets/svgs/vue.svg?raw';
 		</p>
 		<br />
 		<p class="indent-4 leading-7">
-			I do not have a preference for any specific pronouns, therefore, I am comfortable with using <b
+			<b>I do not have a preference for any specific pronouns</b>, therefore, I am comfortable with using <b
 				class="text-meadow-dark dark:text-meadow-lighter"
 			>
 				They / Any
@@ -72,9 +81,12 @@ import Vue from '../assets/svgs/vue.svg?raw';
 		</p>
 		<br />
 		<p class="text-center leading-7">
-			Interested in working with me? Feel free to <a href="mailto:jaezmien.naejara@gmail.com">
+			Interested in working with me? Feel free to <TextLink
+				href="mailto:jaezmien.naejara@gmail.com"
+				spacing="relaxed"
+			>
 				drop me an email.
-			</a>
+			</TextLink>
 		</p>
 
 		<Separator />
@@ -125,34 +137,83 @@ import Vue from '../assets/svgs/vue.svg?raw';
 			</span> Experiences
 		</h2>
 		<ul
+			id="tech-experiences"
 			class="flex flex-wrap justify-evenly place-items-center gap-8 mx-2 my-4 fill-meadow-dark dark:fill-meadow-lighter"
 		>
 			<li class="w-16 h-16" aria-label="Vue JS">
-				<Fragment set:html={Vue} />
+				<a href="https://vuejs.org" target="_blank">
+					<Fragment set:html={Vue} />
+				</a>
 			</li>
-			<li class="w-16 h-16" aria-label="Nuxt JS">
-				<Fragment set:html={Nuxt} />
+			<li aria-label="Nuxt JS">
+				<a href="https://nuxt.com" target="_blank" class="w-16 h-16 grid place-items-center">
+					<Fragment set:html={Nuxt} />
+				</a>
+			</li>
+			<li aria-label="Astro">
+				<a href="https://astro.build" target="_blank">
+					<div class="block dark:hidden w-16 h-16">
+						<Fragment set:html={AstroL} />
+					</div>
+					<div class="hidden dark:block w-16 h-16">
+						<Fragment set:html={AstroD} />
+					</div>
+				</a>
 			</li>
 			<li class="w-16 h-16" aria-label="Express JS">
-				<Fragment set:html={Express} />
+				<a href="https://expressjs.com/" target="_blank">
+					<Fragment set:html={Express} />
+				</a>
 			</li>
 			<li class="w-16 h-16" aria-label="Sass">
-				<Fragment set:html={Sass} />
+				<a href="https://sass-lang.com/" target="_blank">
+					<Fragment set:html={Sass} />
+				</a>
 			</li>
 			<li class="w-16 h-16" aria-label="Tailwind CSS">
-				<Fragment set:html={Tailwind} />
+				<a href="https://tailwindcss.com" target="_blank">
+					<Fragment set:html={Tailwind} />
+				</a>
+			</li>
+			<li class="w-16 h-16" aria-label="WindiCSS">
+				<a href="https://windicss.org" target="_blank">
+					<Fragment set:html={WindiCSS} />
+				</a>
 			</li>
 			<li class="w-16 h-16" aria-label="SQLite">
-				<Fragment set:html={SQLite} />
+				<a href="https://sqlite.org/" target="_blank">
+					<Fragment set:html={SQLite} />
+				</a>
 			</li>
 			<li class="w-16 h-16" aria-label="Sequelize">
-				<Fragment set:html={Sequelize} />
+				<a href="https://sequelize.org/" target="_blank">
+					<Fragment set:html={Sequelize} />
+				</a>
+			</li>
+			<li class="grid place-items-center" aria-label="Prisma">
+				<a href="https://prisma.io/" target="_blank">
+					<div class="block dark:hidden w-16 h-16">
+						<Fragment set:html={PrismaL} />
+					</div>
+					<div class="hidden dark:block w-16 h-16">
+						<Fragment set:html={PrismaD} />
+					</div>
+				</a>
+			</li>
+			<li aria-label="AlpineJS">
+				<a href="https://alpinejs.dev" target="_blank" class="w-16 h-16 grid place-items-center">
+					<Fragment set:html={Alpine} />
+				</a>
 			</li>
 			<li class="w-16 h-16" aria-label="Firebase">
-				<Fragment set:html={Firebase} />
+				<a href="https://firebase.google.com" target="_blank">
+					<Fragment set:html={Firebase} />
+				</a>
 			</li>
 			<li class="w-16 h-16" aria-label="Discord JS">
-				<Fragment set:html={DiscordJS} />
+				<a href="https://discord.js.org" target="_blank">
+					<Fragment set:html={DiscordJS} />
+				</a>
 			</li>
 		</ul>
 		<p class="mt-8 text-center opacity-80 italic font-light">...and eager to learn more everyday!</p>
@@ -173,6 +234,13 @@ import Vue from '../assets/svgs/vue.svg?raw';
 			&.show {
 				opacity: 1;
 			}
+		}
+	}
+
+	#tech-experiences {
+		svg {
+			width: inherit;
+			height: inherit;
 		}
 	}
 </style>
