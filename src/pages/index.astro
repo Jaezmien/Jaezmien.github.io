@@ -2,13 +2,17 @@
 import {
 	briefcase as Briefcase,
 	gamepad2 as Gamepad2,
-	github as Github,
 	mail as Mail,
-	twitter as Twitter,
 	user as User,
 	wallet as Wallet,
-	youtube as Youtube,
 } from 'lucide-static/lib';
+
+import Cohost from '../assets/svgs/cohost.svg?raw';
+import Github from '../assets/svgs/github.svg?raw';
+import Mastodon from '../assets/svgs/mastodon.svg?raw';
+import Twitter from '../assets/svgs/twitter.svg?raw';
+import Youtube from '../assets/svgs/youtube.svg?raw';
+import IndexFooterIcon from '../components/IndexFooterIcon.astro';
 
 import IndexLink from '../components/IndexLink.astro';
 import Layout from '../layouts/Layout.astro';
@@ -49,42 +53,53 @@ import Layout from '../layouts/Layout.astro';
 			</nav>
 
 			<footer>
-				<ul class="flex flex-row place-items-center justify-evenly">
+				<ul class="flex flex-row flex-wrap place-items-center justify-evenly sm:justify-around gap-2">
 					<li>
-						<a
+						<IndexFooterIcon
 							href="mailto:jaezmien.naejara@gmail.com"
-							aria-label="Email"
-							class="transition-opacity opacity-60 duration-200 hover:opacity-100 text-meadow-dark dark:text-meadow-lighter"
+							label="Email"
+							class="text-meadow-dark dark:text-meadow-lighter"
 						>
 							<Fragment set:html={Mail} />
-						</a>
+						</IndexFooterIcon>
 					</li>
-					<li>
-						<a
+					<li class="w-6 h-6">
+						<IndexFooterIcon
 							href="https://www.youtube.com/channel/UCTXYVbsNeYEZfYEv6YaWc8A"
-							aria-label="Youtube"
-							class="transition-opacity opacity-60 duration-200 hover:opacity-100 text-[#ff0000]"
+							label="Youtube"
+							class="fill-[#ff0000]"
 						>
 							<Fragment set:html={Youtube} />
-						</a>
+						</IndexFooterIcon>
 					</li>
-					<li>
-						<a
-							href="https://twitter.com/jaezmien"
-							aria-label="Twitter"
-							class="transition-opacity opacity-60 duration-200 hover:opacity-100 text-[#1da1f2]"
-						>
+					<li class="w-6 h-6">
+						<IndexFooterIcon href="https://twitter.com/jaezmien" label="Twitter" class="fill-[#1DA1F2]">
 							<Fragment set:html={Twitter} />
-						</a>
+						</IndexFooterIcon>
 					</li>
-					<li>
-						<a
+					<li class="sm:hidden block h-2 basis-full"></li>
+					<li class="w-6 h-6">
+						<IndexFooterIcon href="https://cohost.org/jaezmien" label="Cohost" class="fill-[#671a3d]">
+							<Fragment set:html={Cohost} />
+						</IndexFooterIcon>
+					</li>
+					<li class="w-6 h-6">
+						<IndexFooterIcon
+							href="https://equestria.social/@jaezmien"
+							label="Mastodon"
+							class="fill-[#6364FF]"
+						>
+							<Fragment set:html={Mastodon} />
+						</IndexFooterIcon>
+					</li>
+					<li class="w-6 h-6">
+						<IndexFooterIcon
 							href="https://github.com/Jaezmien"
-							aria-label="Github"
-							class="transition-opacity opacity-60 duration-200 hover:opacity-100 text-[#333333] dark:filter dark:invert"
+							label="Github"
+							class="fill-[#333333] dark:fill-[#ffffff]"
 						>
 							<Fragment set:html={Github} />
-						</a>
+						</IndexFooterIcon>
 					</li>
 				</ul>
 			</footer>
