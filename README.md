@@ -1,3 +1,9 @@
+# 🐮 Notice
+
+Meadow is now replaced by [Flower](https://git.jaezmien.com/Jaezmien/flower).
+
+---
+
 <div align="center">
 	<h1>🐎 Meadow</h1>
 
